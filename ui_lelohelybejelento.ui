@@ -1,0 +1,1405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LelohelyBejelento</class>
+ <widget class="QDialog" name="LelohelyBejelento">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>491</width>
+    <height>661</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>491</width>
+    <height>661</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>491</width>
+    <height>661</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Lelőhely-bejelentő készítő (LBK)</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>630</y>
+     <width>161</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>471</width>
+     <height>581</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="tabPosition">
+    <enum>QTabWidget::North</enum>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Rounded</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="elideMode">
+    <enum>Qt::ElideNone</enum>
+   </property>
+   <widget class="QWidget" name="tab1">
+    <attribute name="title">
+     <string>Általános adatok</string>
+    </attribute>
+    <widget class="QGroupBox" name="Section01">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>441</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>A lelőhely megjelölése</string>
+     </property>
+     <widget class="QLabel" name="CountyName">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Megye</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CityName">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Város, település</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Hazszam">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>110</y>
+        <width>311</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="HouseName">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>110</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Házszám</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="KOHAzon">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>140</y>
+        <width>251</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="KOHName">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>140</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nyilvántartási azonosító szám</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Utca">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>80</y>
+        <width>311</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="RoadName">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>80</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Utca</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="Megye">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>20</y>
+        <width>291</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="Telepules">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>50</y>
+        <width>291</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chckMegye">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>20</y>
+        <width>16</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chckTelepules">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>50</y>
+        <width>16</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Section02">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>190</y>
+       <width>441</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>A lelőhely neve(i)</string>
+     </property>
+     <widget class="QLineEdit" name="LeloNev">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>411</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Section03">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>441</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>A lelőhely pontos helye</string>
+     </property>
+     <widget class="QLabel" name="CRSName">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>171</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>A mellékelt térkép(vetület) fajtája</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CRSAzon">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>20</y>
+        <width>241</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="MapNumberName">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>A térképlap száma</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="EOVSzelveny">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>50</y>
+        <width>241</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="HRSZ">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>80</y>
+        <width>241</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="FoldrLeiras">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>401</width>
+        <height>121</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Pontossag">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>260</y>
+        <width>211</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhDigitsOnly</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="HRSZName">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Helyrajzi szám(ok)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="GeoDescriptionName">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Földrajzi leírás</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="AccuracyName">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>260</y>
+        <width>181</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>A helymeghatározás pontossága [m]</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chckPontossag">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>260</y>
+        <width>16</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <zorder>Section03</zorder>
+    <zorder>Section01</zorder>
+    <zorder>Section02</zorder>
+   </widget>
+   <widget class="QWidget" name="tab2">
+    <attribute name="title">
+     <string>Régészeti jelenségek</string>
+    </attribute>
+    <widget class="QGroupBox" name="Section04">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>441</width>
+       <height>531</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>A lelőhelyen talált régészeti jelenségek adatai</string>
+     </property>
+     <widget class="QPushButton" name="AddJellegKorButton">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>80</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sor hozzáadása</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RemoveJellegKorButton">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>110</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sor törlése</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="KorCombo">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>20</y>
+        <width>201</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="maxVisibleItems">
+       <number>30</number>
+      </property>
+      <property name="maxCount">
+       <number>2147483647</number>
+      </property>
+      <property name="insertPolicy">
+       <enum>QComboBox::InsertAtBottom</enum>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="JellegCombo">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>211</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maxVisibleItems">
+       <number>30</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="PontosKor">
+      <property name="geometry">
+       <rect>
+        <x>252</x>
+        <y>50</y>
+        <width>181</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="PontosJelleg">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>191</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="JellegKorTable">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>311</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>150</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Jelleg</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Kor</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab3">
+    <attribute name="title">
+     <string>További adatok</string>
+    </attribute>
+    <widget class="QGroupBox" name="Section05">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>441</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>A lelőhely állapota</string>
+     </property>
+     <widget class="QComboBox" name="LelohelyAllapot">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>231</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="EgyebAllapot">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>20</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Section06">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>441</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>A lelőhely veszélyeztetettsége</string>
+     </property>
+     <widget class="QComboBox" name="LelohelyVeszely">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>231</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="EgyebVeszely">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>20</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Section07">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>441</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>A lelőhely ismertsége</string>
+     </property>
+     <widget class="QComboBox" name="ForrasTipusValue">
+      <property name="geometry">
+       <rect>
+        <x>136</x>
+        <y>20</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="ForrasTable">
+      <property name="geometry">
+       <rect>
+        <x>16</x>
+        <y>50</y>
+        <width>411</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>100</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Forrás típusa</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Szerző</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Cím</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Jelzet</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="AddForrasButton">
+      <property name="geometry">
+       <rect>
+        <x>256</x>
+        <y>20</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Új sor hozzáadása</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RemoveForrasButton">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>20</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sor törlése</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="Ismertseg">
+      <property name="geometry">
+       <rect>
+        <x>16</x>
+        <y>20</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Section08">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>300</y>
+       <width>441</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>A lelőhelyen végzett tevékenység</string>
+     </property>
+     <widget class="QTableWidget" name="TevekenysegTable">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>411</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>100</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Év</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Tevékenység</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Név</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Megjegyzés</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="AddTevekenysegButton">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>20</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Új sor hozzáadása</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RemoveTevekenysegButton">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>20</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sor törlése</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab4">
+    <attribute name="title">
+     <string>Egyéb</string>
+    </attribute>
+    <widget class="QGroupBox" name="Section11">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>441</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Megjegyzés</string>
+     </property>
+     <widget class="QPlainTextEdit" name="Megjegyzes">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>411</width>
+        <height>121</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Section12">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>320</y>
+       <width>441</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>A bejelentés kelte</string>
+     </property>
+     <widget class="QCalendarWidget" name="Calendar">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>20</y>
+        <width>251</width>
+        <height>155</height>
+       </rect>
+      </property>
+      <property name="gridVisible">
+       <bool>true</bool>
+      </property>
+      <property name="horizontalHeaderFormat">
+       <enum>QCalendarWidget::ShortDayNames</enum>
+      </property>
+      <property name="verticalHeaderFormat">
+       <enum>QCalendarWidget::NoVerticalHeader</enum>
+      </property>
+      <property name="navigationBarVisible">
+       <bool>true</bool>
+      </property>
+      <property name="dateEditEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Datum">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>180</y>
+        <width>231</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chckDatum">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>180</y>
+        <width>16</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Section09">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>441</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>A leleteket fogadó múzeum</string>
+     </property>
+     <widget class="QComboBox" name="Muzeum">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>211</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="EgyebMuzeum">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>20</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chckMuzeum">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>16</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Section10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>441</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>A bejelentő természetes személyazonosító adatai</string>
+     </property>
+     <widget class="QLineEdit" name="BejelentoNev">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="PersonName">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Név</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="WorkplaceName">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Munkahely</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="BejelentoMunkahely">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>50</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chckBejelentoNev">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>20</y>
+        <width>16</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chckBejelentoMunkahely">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>50</y>
+        <width>16</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab5">
+    <attribute name="title">
+     <string>PDF mentés</string>
+    </attribute>
+    <widget class="QComboBox" name="PDFMapScale">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>80</y>
+       <width>131</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="PDFMapOrientation">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>30</y>
+       <width>131</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="PDFMapOrientationName">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Térkép tájolása</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="PDFMapScaleName">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Térkép méretaránya</string>
+     </property>
+    </widget>
+    <widget class="QCommandLinkButton" name="SavePDFButton">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>310</y>
+       <width>211</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Szöveges lelőhely-bejelentő
+mentése PDF-be</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chckPDFMapOrientation">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>16</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chckPDFMapScale">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>16</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QCommandLinkButton" name="PDFMapPrint">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>400</y>
+       <width>211</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Lelőhely-bejelentő térkép
+mentése PDF-be</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="PDFMapTitleName">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>160</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Térkép címe</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="PDFMapTitle">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>180</y>
+       <width>241</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chckPDFMapTitle">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>180</y>
+       <width>16</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="PDFMapOrientationTip">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>30</y>
+       <width>271</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Javasolt: -</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chckPDFMapResolution">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>16</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Kívánt felbontás</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="PDFMapResolutionName">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Kívánt felbontás (dpi)</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="PDFMapResolution">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>130</y>
+       <width>131</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="TitleName">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>491</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>LELŐHELY-BEJELENTŐ KÉSZÍTŐ</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SaveToXMLButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>630</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: italic 8pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Mentés XML fájlba</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="LoadFromXMLButton">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>630</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: italic 8pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Betöltés XML fájlból</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="VersionName">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>10</y>
+     <width>31</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>v0.1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Errors">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>630</y>
+     <width>51</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: italic 8pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Hibák</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>chckMegye</tabstop>
+  <tabstop>Megye</tabstop>
+  <tabstop>chckTelepules</tabstop>
+  <tabstop>Telepules</tabstop>
+  <tabstop>Utca</tabstop>
+  <tabstop>Hazszam</tabstop>
+  <tabstop>KOHAzon</tabstop>
+  <tabstop>LeloNev</tabstop>
+  <tabstop>CRSAzon</tabstop>
+  <tabstop>EOVSzelveny</tabstop>
+  <tabstop>HRSZ</tabstop>
+  <tabstop>FoldrLeiras</tabstop>
+  <tabstop>chckPontossag</tabstop>
+  <tabstop>Pontossag</tabstop>
+  <tabstop>JellegCombo</tabstop>
+  <tabstop>PontosJelleg</tabstop>
+  <tabstop>KorCombo</tabstop>
+  <tabstop>PontosKor</tabstop>
+  <tabstop>JellegKorTable</tabstop>
+  <tabstop>AddJellegKorButton</tabstop>
+  <tabstop>RemoveJellegKorButton</tabstop>
+  <tabstop>LelohelyAllapot</tabstop>
+  <tabstop>EgyebAllapot</tabstop>
+  <tabstop>LelohelyVeszely</tabstop>
+  <tabstop>EgyebVeszely</tabstop>
+  <tabstop>ForrasTipusValue</tabstop>
+  <tabstop>AddForrasButton</tabstop>
+  <tabstop>RemoveForrasButton</tabstop>
+  <tabstop>ForrasTable</tabstop>
+  <tabstop>AddTevekenysegButton</tabstop>
+  <tabstop>RemoveTevekenysegButton</tabstop>
+  <tabstop>TevekenysegTable</tabstop>
+  <tabstop>chckMuzeum</tabstop>
+  <tabstop>Muzeum</tabstop>
+  <tabstop>EgyebMuzeum</tabstop>
+  <tabstop>chckBejelentoNev</tabstop>
+  <tabstop>BejelentoNev</tabstop>
+  <tabstop>chckBejelentoMunkahely</tabstop>
+  <tabstop>BejelentoMunkahely</tabstop>
+  <tabstop>Megjegyzes</tabstop>
+  <tabstop>Calendar</tabstop>
+  <tabstop>chckDatum</tabstop>
+  <tabstop>Datum</tabstop>
+  <tabstop>SaveToXMLButton</tabstop>
+  <tabstop>LoadFromXMLButton</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>LelohelyBejelento</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>LelohelyBejelento</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
