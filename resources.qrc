@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/lelohelybejelento" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
